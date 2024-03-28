@@ -47,12 +47,12 @@ class YahooDownloader:
         # page = session.get('https://finance.yahoo.com/quote/IBM/history?p=IBM')
         # CrumbStore
         
-        page = session.get('https://finance.yahoo.com/quote/AAPL/history?period1=1503558000&period2=1535094000&interval=1wk&filter=history&frequency=1wk')
+        # page = session.get('https://finance.yahoo.com/quote/AAPL/history?period1=1503558000&period2=1535094000&interval=1wk&filter=history&frequency=1wk')
         
-        m = re.search('"CrumbStore":{"crumb":"(.*?)"}', page.text)
-        crumb = m.group(1)
-        crumb = crumb.encode('ascii').decode('unicode-escape')
-
+        # m = re.search('"CrumbStore":{"crumb":"(.*?)"}', page.text)
+        # crumb = m.group(1)
+        # crumb = crumb.encode('ascii').decode('unicode-escape')
+        crumb = "cccccccc"
         def download(event, folder):
             start = int(start_date.timestamp())
             now = int(datetime.datetime.now().timestamp())
