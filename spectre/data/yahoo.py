@@ -39,7 +39,7 @@ class YahooDownloader:
             #     'https://etfdailynews.com/etf/spy/', headers={'User-agent': 'Mozilla/5.0'}
             # ).text, attrs={'id': 'etfs-that-own'})
             # symbols = [x for x in etf[0].Symbol.values.tolist() if isinstance(x, str)]
-            symbols.extend(['SPY', 'QQQ'])
+            # symbols.extend(['SPY', 'QQQ'])
             symbols = ['SPY','QQQ']
             calender_asset = 'SPY'
 
