@@ -35,11 +35,12 @@ class YahooDownloader:
 
         calender_asset = None
         if symbols is None:
-            etf = pd.read_html(requests.get(
-                'https://etfdailynews.com/etf/spy/', headers={'User-agent': 'Mozilla/5.0'}
-            ).text, attrs={'id': 'etfs-that-own'})
-            symbols = [x for x in etf[0].Symbol.values.tolist() if isinstance(x, str)]
+            # etf = pd.read_html(requests.get(
+            #     'https://etfdailynews.com/etf/spy/', headers={'User-agent': 'Mozilla/5.0'}
+            # ).text, attrs={'id': 'etfs-that-own'})
+            # symbols = [x for x in etf[0].Symbol.values.tolist() if isinstance(x, str)]
             symbols.extend(['SPY', 'QQQ'])
+            symbols = ['SPY','QQQ']
             calender_asset = 'SPY'
 
         session = requests.Session()
